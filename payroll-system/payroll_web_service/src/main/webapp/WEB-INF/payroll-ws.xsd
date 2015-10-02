@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	targetNamespace="http://www.i-techsoftware.com/vjs-payroll" xmlns:vjs="http://www.i-techsoftware.com/vjs-payroll">
+
+	<xs:complexType name="DedeuctionType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:token" nillable="true" />
+			<xs:element name="Amount" type="vjs:DecimalType" nillable="true" default="0.0" />
+			<xs:element name="Type" type="vjs:Type" default="% of Gross Pay" />
+			<xs:element name="IsExempted" type="xs:boolean" default="false" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="DecimalType">
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="2" />
+			<xs:totalDigits value="12" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="PayFrequencyType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Daily" />
+			<xs:enumeration value="Weekly" />
+			<xs:enumeration value="Bi-weekly" />
+			<xs:enumeration value="Semi-monthly" />
+			<xs:enumeration value="Monthly" />
+			<xs:enumeration value="Quaterly" />
+			<xs:enumeration value="Semi-annually" />
+			<xs:enumeration value="Annually" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="FederalFilingStatusType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Single" />
+			<xs:enumeration value="Married" />
+			<xs:enumeration value="Head of Household" />
+			<xs:enumeration value="Supplemental" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="FilingStatusType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Regular" />
+			<xs:enumeration value="Supplemental" />
+			<xs:enumeration value="Exempt" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="Type">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="% of Gross Pay" />
+			<xs:enumeration value="% of Net Pay" />
+			<xs:enumeration value="$ Fixed Amount" />
+			<xs:enumeration value="$ Hourly Rate" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="PayrollRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="EmployeeName" type="xs:token" nillable="true" default="" />
+				<xs:element name="TaxYear" default="2013">
+					<xs:simpleType>
+						<xs:restriction base="xs:integer">
+							<xs:pattern value="[1-9][0-9][0-9][0-9]" />
+							<xs:minInclusive value="1990" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="State" type="xs:token" default="Virginia" />
+				<xs:element name="GrossPay" type="vjs:DecimalType" />
+				<xs:element name="PayFrequency" type="vjs:PayFrequencyType" default="Weekly" />
+				<xs:element name="FederalFilingStatus" type="vjs:FederalFilingStatusType" default="Single" />
+				<xs:element name="NoOfAllowance" type="vjs:DecimalType" default="0" />
+				<xs:element name="AdditionalFederalWithholding" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="IsExempted" type="xs:boolean" default="false" />
+				<xs:element name="FilingStatus" type="vjs:FilingStatusType" default="Regular" />
+				<xs:element name="PersonalExemptions" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="AdditionalExemptions" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="AdditionalStateWithholding" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="Deductions" type="vjs:DedeuctionType" maxOccurs="10" nillable="true" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="PayrollResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MonthlyGrossPay" type="vjs:DecimalType" />
+				<xs:element name="FIT" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="SocialSecurity" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="Medicare" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="SIT" type="vjs:DecimalType" default="0.0" />
+				<xs:element name="Deductions" type="vjs:DedeuctionType" maxOccurs="10" nillable="true" />
+				<xs:element name="NetPay" type="vjs:DecimalType" default="0.0" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>

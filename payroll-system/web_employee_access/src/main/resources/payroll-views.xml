@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<bean id="welcome" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="welcomePage" />
+	</bean>
+
+	<bean id="hello" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="helloPage" />
+	</bean>
+
+	<bean id="login" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="loginPage" />
+	</bean>
+	<bean id="forgotPasswordStep1" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotPasswordStep1Page" />
+	</bean>
+	<bean id="forgotPasswordStep2" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotPasswordStep2Page" />
+	</bean>
+	<bean id="forgotPasswordStep3" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotPasswordStep3Page" />
+	</bean>
+	<bean id="resetPassword" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="resetPasswordPage" />
+	</bean>
+	
+	<bean id="forgotUserNameStep1" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotUserNameStep1Page" />
+	</bean>
+	<bean id="forgotUserNameStep2" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotUserNameStep2Page" />
+	</bean>
+	<bean id="forgotUserNameStep3" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="forgotUserNameStep3Page" />
+	</bean>
+	
+	<bean id="payStub" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="payStubPage" />
+	</bean>
+	
+
+	<bean id="logout" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="logoutPage" />
+	</bean>
+
+	<!-- Redirect view -->
+	<bean id="logoutReditect" class="org.springframework.web.servlet.view.RedirectView">
+		<property name="url" value="logoutReditectPage" />
+	</bean>
+	
+	<bean id="accessDenied" class="org.springframework.web.servlet.view.tiles2.TilesView">
+		<property name="url" value="accessDeniedPage"  />
+	</bean>
+
+
+
+
+
+</beans>

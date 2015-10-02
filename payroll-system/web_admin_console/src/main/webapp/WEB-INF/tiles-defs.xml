@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Layout -->
+	<definition name="base.definition" template="/WEB-INF/tiles/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/tiles/menu.jsp" />
+		<put-attribute name="messagebar" value="/WEB-INF/tiles/messagebar.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="bottom" value="/WEB-INF/tiles/bottom.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp" />
+	</definition>
+
+	<!-- Base Layout for login -->
+	<definition name="loginBase.definition" template="/WEB-INF/tiles/loginLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<!-- Login -->
+	<definition name="loginPage" extends="loginBase.definition">
+		<put-attribute name="title" value="Login" />
+		<put-attribute name="body" value="/WEB-INF/jsp/login.jsp" />
+	</definition>
+
+	<definition name="pinPage" extends="loginBase.definition">
+		<put-attribute name="title" value="Pin" />
+		<put-attribute name="body" value="/WEB-INF/jsp/pinVerification.jsp" />
+	</definition>
+
+	<definition name="forgotPasswordStep1Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPasswordStep1.jsp" />
+	</definition>
+
+	<definition name="forgotPasswordStep2Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPasswordStep2.jsp" />
+	</definition>
+	
+	<definition name="forgotPasswordStep3Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPasswordStep3.jsp" />
+	</definition>
+	<definition name="resetPasswordPage" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/resetPassword.jsp" />
+	</definition>
+	
+		<definition name="forgotUserNameStep1Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot UserName" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotUserNameStep1.jsp" />
+	</definition>
+
+	<definition name="forgotUserNameStep2Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotUserNameStep2.jsp" />
+	</definition>
+	
+	<definition name="forgotUserNameStep3Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotUserNameStep3.jsp" />
+	</definition>
+	
+		<definition name="forgotPinStep1Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Pin" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPinStep1.jsp" />
+	</definition>
+
+	<definition name="forgotPinStep2Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Pin" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPinStep2.jsp" />
+	</definition>
+	
+	<definition name="forgotPinStep3Page" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Pin" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/forgotPinStep3.jsp" />
+	</definition>
+	<definition name="resetPinPage" extends="loginBase.definition">
+		<put-attribute name="title" value="Forgot Pin" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/resetPin.jsp" />
+	</definition>
+	
+	<!-- Home -->
+	<definition name="welcomePage" extends="base.definition">
+		<put-attribute name="title" value="Welcome to Itech PayRoll System" />
+		<put-attribute name="body" value="/WEB-INF/jsp/welcome.jsp" />
+	</definition>
+
+	<definition name="companyInfoPage" extends="base.definition">
+		<put-attribute name="title" value="Manage Company Info" />
+		<put-attribute name="body" value="/WEB-INF/jsp/companyInfo.jsp" />
+	</definition>
+
+	<definition name="companyEarningAndDeductionPage" extends="base.definition">
+		<put-attribute name="title" value="Manage Company Info" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/companyEarningAndDeduction.jsp" />
+	</definition>
+
+	<definition name="helloPage" extends="base.definition">
+		<put-attribute name="title" value="Hello" />
+		<put-attribute name="body" value="/WEB-INF/jsp/hello.jsp" />
+	</definition>
+
+	<definition name="statePage" extends="base.definition">
+		<put-attribute name="title" value="State" />
+		<put-attribute name="body" value="/WEB-INF/jsp/state.jsp" />
+	</definition>
+
+
+	<!-- <definition name="loginPage" extends="base.definition"> -->
+	<!-- <put-attribute name="title" value="Login" /> -->
+	<!-- <put-attribute name="body" value="/WEB-INF/jsp/loginOld -->
+	<!-- .jsp" /> -->
+	<!-- </definition> -->
+
+	<definition name="logoutPage" extends="base.definition">
+		<put-attribute name="title" value="Logged out" />
+		<put-attribute name="body" value="/WEB-INF/jsp/logout.jsp" />
+	</definition>
+
+	<definition name="accessDeniedPage" extends="base.definition">
+		<put-attribute name="title" value="Access Denied" />
+		<put-attribute name="body" value="/WEB-INF/jsp/accessDenied.jsp" />
+	</definition>
+
+</tiles-definitions>
