@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version last-->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b333d19d-866a-408b-bdbe-35bb4ed02ea5">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="server_payroll"/>
+	<queryString>
+		<![CDATA[select @rownum:=@rownum+1 as 'sno',
+pi.invoice_no,
+pi.generated_on,
+pi.invoice_amount,
+p.check_date,
+pi.`status`,
+pi.payment_or_cancellation_date
+from payroll_invoice pi inner join payroll p on pi.payroll_id = p.id, 
+(SELECT @rownum:=0) r
+where p.company_id = 1
+and p.check_date BETWEEN '2013-01-01' and '2013-02-28']]>
+	</queryString>
+	<field name="sno" class="java.lang.Long"/>
+	<field name="invoice_no" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="invoice_amount" class="java.math.BigDecimal">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="payment_or_cancellation_date" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="generated_on" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="check_date" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="4f0780fc-935d-4a7b-bd87-28bdef6b4b86" x="77" y="0" width="400" height="40"/>
+				<textElement textAlignment="Center">
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Invoice]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement uuid="6cc8b520-cd2a-4add-a6cb-1112d2a74214" mode="Opaque" x="-18" y="29" width="578" height="32" forecolor="#0000FF" backcolor="#C0C0C0"/>
+				<staticText>
+					<reportElement uuid="3009690e-d864-4ad3-8521-bbbc3f8d4c4b" x="425" y="1" width="50" height="20"/>
+					<textElement>
+						<font size="14"/>
+					</textElement>
+					<text><![CDATA[Status]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement uuid="8ed10665-af91-4f06-b703-2d2749a9f73c" x="-10" y="29" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[S.No.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ccdb3485-8c49-46aa-9479-b5e6d4cc8e46" x="50" y="29" width="70" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Invoice No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="d95146cd-e3e7-458f-8ba9-3528bb1c2fb6" x="140" y="29" width="80" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Invoice Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="39700156-c4f5-40f7-87ac-966bba0050b1" x="250" y="29" width="50" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="b8b752d2-9195-4585-890a-603213368701" x="320" y="29" width="80" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Check Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="19ca7086-3807-42ff-95fe-15c6d228a1d4" x="470" y="29" width="90" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Payment Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="42" splitType="Stretch">
+			<textField>
+				<reportElement uuid="b3896fbb-ba92-48af-872b-9e5964d8486f" x="-20" y="0" width="60" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{sno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="88a658bd-b794-432d-8711-03961cbda08b" x="50" y="0" width="70" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{invoice_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="M/d/yy">
+				<reportElement uuid="c9b4f0a4-81e6-4337-ada9-9368ab1af1d2" x="140" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{generated_on}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="16d2f720-d4f7-4ab3-9c60-a0ebb435bf65" x="240" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{invoice_amount}]]></textFieldExpression>
+			</textField>
+			<textField pattern="MMM d, yyyy">
+				<reportElement uuid="d6d1c54e-4292-4b2e-98ec-84b70cda0340" x="320" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{check_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a3b9f141-2246-4297-a832-93899c6fb2a0" x="400" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField pattern="M/d/yy">
+				<reportElement uuid="af9f6693-e49c-4387-89dc-de5f26922283" x="477" y="0" width="70" height="30"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{payment_or_cancellation_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="56" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

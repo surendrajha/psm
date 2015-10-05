@@ -1,0 +1,268 @@
+/**
+ * 
+ */
+package com.epayroll.constant;
+
+/**
+ * @author Basit Azeem Sheikh
+ */
+public enum Section {
+
+	// Company Portal
+	// Payroll Section
+	// NORMAL_PAYROLL
+	NORMAL_PAYROLL("Normal PayRoll", SubMenu.NORMAL_PAYROLL), //
+
+	// ONE_CLICK_PAYROLL
+	ONE_CLICK_PAYROLL("One Click Payroll", SubMenu.ONE_CLICK_PAYROLL), //
+
+	// SPECIAL_PAYROLL
+	SPECIAL_PAYROLL("Special Payroll", SubMenu.SPECIAL_PAYROLL), //
+
+	// CALCULATE_AND_RECORD_MANUAL_CHECKS
+	MANUAL_CHECKS("Manual Checks", SubMenu.CALCULATE_AND_RECORD_MANUAL_CHECKS), //
+
+	// VOID_A_CHECK
+	VOID_CHECK_LIST("Void Check List", SubMenu.VOID_A_CHECK), //
+
+	// THIRD_PARTY_SICK_PAY
+	THIRD_PARTY_SICK_PAY("Third Party Sick Pay", SubMenu.THIRD_PARTY_SICK_PAY), //
+
+	// PAYMENT_RECONCILIATION
+	CHECK_LIST("Check List", SubMenu.PAYMENT_RECONCILIATION), //
+
+	// Employee Sections
+	// EMPLOYEE_CONTRACTOR_LIST
+	EMPLOYEE_LIST("Employee List", SubMenu.EMPLOYEE_CONTRACTOR_LIST), //
+	CONTRACTOR_LIST("Contractor List", SubMenu.EMPLOYEE_CONTRACTOR_LIST), //
+
+	// EMPLOYEE_INFO
+	EMPLOYEE_PERSONAL_INFO("Personal Info", SubMenu.EMPLOYEE_INFO), //
+	EMPLOYEE_EMPLOYMENT_INFO("Employment Info", SubMenu.EMPLOYEE_INFO), //
+
+	// CONTRACTOR_INFO
+	CONTRACTOR_PERSONAL_INFO("Personal Info", SubMenu.CONTRACTOR_INFO), //
+	CONTRACTOR_EMPLOYMENT_INFO("Employment Info", SubMenu.CONTRACTOR_INFO), //
+
+	// PAY_SETUP
+	PAY_SETUP_DETAILS("Pay Setup Details", SubMenu.PAY_SETUP), //
+
+	// EMPLOYEE_EARNINGS_AND_DEDUCTIONS
+	EMPLOYEE_EARNINGS("Earnings", SubMenu.EMPLOYEE_EARNINGS_AND_DEDUCTIONS), //
+	EMPLOYEE_DEDUCTIONS("Deductions", SubMenu.EMPLOYEE_EARNINGS_AND_DEDUCTIONS), //
+
+	// CONTRACTOR_DEDUCTIONS
+	CONTRACTOR_DEDUCTION("Deductions", SubMenu.CONTRACTOR_DEDUCTIONS), //
+
+	// EMPLOYEE_BANK_INFO
+	BANK_DETAIL("Bank_Detail", SubMenu.EMPLOYEE_BANK_INFO), //
+
+	// EMPLOYEE_TAX_INFO
+	FEDERAL_TAX("Federal tax", SubMenu.EMPLOYEE_TAX_INFO), //
+	STATE_TAX("State Tax", SubMenu.EMPLOYEE_TAX_INFO), //
+	LOCAL_TAX("Local Tax", SubMenu.EMPLOYEE_TAX_INFO), //
+
+	// DEPARTMENT_ALLOCATION
+	DEPARTMENT_ALLOCATION("Department Allocation", SubMenu.DEPARTMENT_ALLOCATION), //
+
+	// Company Sections
+	// COMPANY_INFO
+	LEGAL_INFO("Legal Info", SubMenu.COMPANY_INFO), //
+	BUSINESS_INFO("Business Info", SubMenu.COMPANY_INFO), //
+	SHIPPING_INFO("Shipping Info", SubMenu.COMPANY_INFO), //
+	AUTHORIZED_SIGNATORY_INFO("Authorized Signatory Info", SubMenu.COMPANY_INFO), //
+	PRIMARY_CONTACT_INFO("Primary Contact Info", SubMenu.COMPANY_INFO), //
+	BILLING_CONTACT_INFO("Billing Contact Info", SubMenu.COMPANY_INFO), //
+
+	// COMPANY_MANAGE_USER
+	COMPANY_USER_PROFILE("User Profile", SubMenu.COMPANY_MANAGE_USER), //
+	COMPANY_SECURITY_PROFILE("Security Profile", SubMenu.COMPANY_MANAGE_USER), //
+	COMPANY_USER_INFO("User Info", SubMenu.COMPANY_MANAGE_USER), //
+	COMPANY_MANAGE_USER_PERMISSION("Manage User Permission", SubMenu.COMPANY_MANAGE_USER), //
+
+	// COMPANY_BANK_INFO
+	COMPANY_BANK_INFORMATION("Bank Information", SubMenu.COMPANY_BANK_INFO), //
+
+	// COMPANY_PAYROLL_SCHEDULE
+	COMPANY_PAYROLL_FREQUENCY("Payroll_Frequency", SubMenu.COMPANY_PAYROLL_SCHEDULE), //
+	COMPANY_PAYROLL_SCHEDULE("Payroll_Schedule", SubMenu.COMPANY_PAYROLL_SCHEDULE), //
+
+	// COMPANY_TAX_INFO
+	COMPANY_FEDERAL_TAX("Federal Tax", SubMenu.COMPANY_TAX_INFO), //
+	COMPANY_STATE_TAX("State Tax", SubMenu.COMPANY_TAX_INFO), //
+	COMPANY_LOCAL_TAX("Local Tax", SubMenu.COMPANY_TAX_INFO), //
+
+	// COMPANY_EARNINGS_AND_DEDUCTIONS
+	COMPANY_EARNING("Earning", SubMenu.COMPANY_EARNINGS_AND_DEDUCTIONS), //
+	COMPANY_DEDUCTION("Deduction", SubMenu.COMPANY_EARNINGS_AND_DEDUCTIONS), //
+
+	// COMPANY_DEPARTMENT_LIST
+	COMPANY_DEPARTMENT("Department List", SubMenu.COMPANY_DEPARTMENT_LIST), //
+
+	// COMPANY_PAID_BENEFITS
+	COMPANY_PAID_BENEFITS("Paid_Benefits", SubMenu.COMPANY_PAID_BENEFITS), //
+
+	// COMPANY_WORKERS_COMPENSATION
+	COMPANY_WORKERS_COMPENSATION("Workers Compensation", SubMenu.COMPANY_WORKERS_COMPENSATION), //
+
+	// COMPANY_PRODUCT_FEATURES
+	COMPANY_PRODUCT_PLAN_SERVICES("Plan Services", SubMenu.COMPANY_PRODUCT_FEATURES), //
+	COMPANY_PRODUCT_OTHER_SERVICES("Other Services", SubMenu.COMPANY_PRODUCT_FEATURES), //
+
+	// COMPANY_PRODUCT_INTEGRATION
+	COMPANY_PRODUCT_TIME_SHEET_INTEGRATION("Time Sheet Integration",
+			SubMenu.COMPANY_PRODUCT_INTEGRATION), //
+	COMPANY_PRODUCT_FINANCIAL_SERVICES_INTEGRATION("Financial Services Integration",
+			SubMenu.COMPANY_PRODUCT_INTEGRATION), //
+
+	// Report Sections
+	// PAYROLL_REPORTS
+	REPORT_PAYROLL_SUMMARY("Payroll Summary", SubMenu.PAYROLL_REPORTS), //
+	REPORT_REQUIREMENT_OF_FUNDS("Requirement Of Funds", SubMenu.PAYROLL_REPORTS), //
+	REPORT_PAYROLL_DETAILS_BY_PERIOD("Payroll Details By Period", SubMenu.PAYROLL_REPORTS), //
+	REPORT_DEDUCTION_DETAILS_BY_PERIOD("Deduction Details By Period", SubMenu.PAYROLL_REPORTS), //
+	REPORT_PAY_REGISTER("Pay Register", SubMenu.PAYROLL_REPORTS), //
+	REPORT_PAY_STUBS("Pay Stubs", SubMenu.PAYROLL_REPORTS), //
+
+	// TAX_REPORTS
+	REPORT_WORKERS_COMPENSATION("Workers Compensation", SubMenu.TAX_REPORTS), //
+	REPORT_WAGE_AND_TAX_REGISTER("Wage And Tax Register", SubMenu.TAX_REPORTS), //
+	REPORT_TAX_INFO_AND_STATUS("Tax Info And Status", SubMenu.TAX_REPORTS), //
+	REPORT_W2("W2", SubMenu.TAX_REPORTS), //
+	REPORT_W3("W3", SubMenu.TAX_REPORTS), //
+	REPORT_1099("1099", SubMenu.TAX_REPORTS), //
+	REPORT_1096("1096", SubMenu.TAX_REPORTS), //
+
+	// EMPLOYEE_REPORTS
+	REPORT_EMPLOYEE_SUMMARY("Employee Summary", SubMenu.EMPLOYEE_REPORTS), //
+	REPORT_EMPLOYEE_DATA_MODIFICATION("Employee Data Modification", SubMenu.EMPLOYEE_REPORTS), //
+
+	// DEPARTMENT_REPORTS
+	REPORT_DEPARTMENT_SUMMARY("Department Summary", SubMenu.DEPARTMENT_REPORTS), //
+	REPORT_DEPARTMENT_DETAIL("Department Detail", SubMenu.DEPARTMENT_REPORTS), //
+
+	// BENEFIT_REPORTS
+	REPORT_PAID_BENEFITS("Paid Benefits", SubMenu.BENEFIT_REPORTS), //
+	REPORT_401K("401K Reports", SubMenu.BENEFIT_REPORTS), //
+
+	// OTHER_REPORTS
+	REPORT_INVOICES("Invoices", SubMenu.OTHER_REPORTS), //
+
+	// Admin Portal Sections
+	// Manage Users Sections
+	// MY_ACCOUNT
+	ADMIN_PROFILE("Admin Profile", SubMenu.MY_ACCOUNT), //
+	ADMIN_SECURITY_PROFILE("Security Profile", SubMenu.MY_ACCOUNT), //
+
+	// ADD_UPDATE_USERS
+	ADMIN_USER_INFO("User Info", SubMenu.ADD_UPDATE_USERS), //
+
+	// MANAGE_ROLE_PERMISSIONS
+	ADMIN_MANAGE_ROLE_PERMISSION("Manage Role Permission", SubMenu.MANAGE_ROLE_PERMISSIONS), //
+
+	// SCHEDULED_BATCHES
+	SCHEDULED_BATCHES("Scheduled Batches", SubMenu.SCHEDULED_BATCHES), //
+
+	// ALL_BATCHES
+	ALL_BATCHES("All Batches", SubMenu.ALL_BATCHES), //
+
+	// ALL_TRANSACTIONS
+	ALL_TRANSACTIONS("All Transactions", SubMenu.ALL_TRANSACTIONS), //
+
+	// Manage System Data Sections
+	// Federal TAX_RELATED_DATA
+	FEDERAL_INCOME_TAX_SLAB("Federal Income Tax Slab", SubMenu.TAX_RELATED_DATA), //
+	OTHER_FEDERAL_TAX_RATE("Other Federal Tax Rate", SubMenu.TAX_RELATED_DATA), //
+	FUTA_CREDIT("Federal Unemployment Tax Credit", SubMenu.TAX_RELATED_DATA), //
+	FEDERAL_ALLOWANCE_RATE("Federal Allowance Rate", SubMenu.TAX_RELATED_DATA), //
+	FEDERAL_STANDARD_DEDUCTION_RATE("Federal Standard Deduction Rate", SubMenu.TAX_RELATED_DATA), //
+	FEDERAL_DEDUCTION_CAP("Federal Deduction Cap", SubMenu.TAX_RELATED_DATA), //
+	FUTA_COMPANY_RATE("Federal Unemployment Tax Company Wise Rate", SubMenu.TAX_RELATED_DATA), //
+	FEDERAL_TAX_DEPOSIT_CYCLE("Federal Tax Deposit Cycle", SubMenu.TAX_RELATED_DATA),
+
+	// State TAX_RELATED_DATA
+	STATE_INCOME_TAX_SLAB("State InCome Tax Slab", SubMenu.TAX_RELATED_DATA), //
+	COUNTY_TAX_RATE("County Tax Rate", SubMenu.TAX_RELATED_DATA), //
+	STATE_ALLOWANCE_RATE("State Allowance Rate", SubMenu.TAX_RELATED_DATA), //
+	SUTA_CEILING("State Unemployment Tax Ceiling", SubMenu.TAX_RELATED_DATA), //
+	STATE_STANDARD_DEDUCTION_RATE("State Standard Deduction Rate", SubMenu.TAX_RELATED_DATA), //
+	STATE_DEDUCTION_CAP("State Deduction Cap", SubMenu.TAX_RELATED_DATA), //
+	SUTA_COMPANY_RATE("State Unemployment Tax Company Wise Rate", SubMenu.TAX_RELATED_DATA), //
+	STATE_TAX_DEPOSIT_CYCLE("State Tax Deposit Cycle", SubMenu.TAX_RELATED_DATA),
+
+	// Other TAX_RELATED_DATA
+	TAX_AUTHORITY("Tax Authority", SubMenu.TAX_RELATED_DATA), //
+	TAX_TYPE("Tax Type", SubMenu.TAX_RELATED_DATA), //
+	WORKERS_COMPENSATION_TAX_RATE("Workers Compensation Tax Rate", SubMenu.TAX_RELATED_DATA), //
+	FILING_STATUS("Filing Status", SubMenu.TAX_RELATED_DATA), //
+	TAX_DEPOSIT_CYCLE_MASTER("Tax Deposit Cycle Master", SubMenu.TAX_RELATED_DATA),
+
+	// EARNINGS_AND_DEDUCTIONS_DATA
+	EARNING_CATEGORIES("Earning Categories", SubMenu.EARNINGS_AND_DEDUCTIONS_DATA), //
+	EARNINGS("Earnings", SubMenu.EARNINGS_AND_DEDUCTIONS_DATA), //
+	DEDUCTION_CATEGORIES("Deduction Categories", SubMenu.EARNINGS_AND_DEDUCTIONS_DATA), //
+	DEDUCTIONS("Deductions", SubMenu.EARNINGS_AND_DEDUCTIONS_DATA),
+
+	// OTHER_DATA
+	US_STATE("Us State", SubMenu.OTHER_DATA), //
+	US_COUNTY("Us County", SubMenu.OTHER_DATA), //
+	US_CITY("Us City", SubMenu.OTHER_DATA), //
+	FEDERAL_AND_STATE_HOLIDAY("Federal And State Holiday", SubMenu.OTHER_DATA), //
+	PAY_CYCLES("Pay Cycles", SubMenu.OTHER_DATA), //
+	ALLOWANCE_TYPE("Allowance Type", SubMenu.OTHER_DATA), //
+	PAYROLL_PLAN("Payroll Plan", SubMenu.OTHER_DATA), //
+	PLAN_FEATURE("Plan Feature", SubMenu.OTHER_DATA), //
+	FUND_CATEGORY("Fund Category", SubMenu.OTHER_DATA), //
+	PAYMENT_MODE("Payment Mode", SubMenu.OTHER_DATA), //
+	TRANSACTION_BODY("Transaction Body", SubMenu.OTHER_DATA), //
+
+	// Tax Deposit & Reporting Sections
+	// TAX_DEPOSITING
+	TAX_DEPOSITING("Tax Depositing", SubMenu.TAX_DEPOSITING), //
+
+	// TAX_REPORTING
+	EMPLOYEE_TAX_FORM("Tax Form", SubMenu.TAX_REPORTING), //
+	CONTRACTOR_TAX_FORM("1099", SubMenu.TAX_REPORTING), //
+
+	// Data Import / Export Sections
+	// IMPORT_DATA
+	IMPORT_DATA("Import Data", SubMenu.IMPORT_DATA), //
+
+	// EXPORT_DATA
+	EXPORT_DATA("Export Data", SubMenu.EXPORT_DATA), //
+
+	// Admin Reports Section
+	// INVOICE_REPORT
+	INVOICE_REPORT("Invoices", SubMenu.INVOICE_REPORT), //
+
+	// PAYROLL_REPORT
+	PAYROLL_REPORT("Payrolls", SubMenu.PAYROLL_REPORT), //
+
+	// COMPANY_REPORT
+	COMPANY_REPORT("Company Details", SubMenu.COMPANY_REPORT), //
+
+	// USER_ACTIVITY_REPORTS
+	USER_ACTIVITY_REPORTS("User Activity Report", SubMenu.USER_ACTIVITY_REPORTS), //
+
+	// FUND_TRANSACTION_REPORT
+	FUND_TRANSACTION_REPORT("Fund Transaction Report", SubMenu.FUND_TRANSACTION_REPORT), //
+
+	;
+
+	private String name;
+	private SubMenu subMenu;
+
+	private Section(String name, SubMenu subMenu) {
+		this.name = name;
+		this.subMenu = subMenu;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public SubMenu getSubMenu() {
+		return subMenu;
+	}
+
+}
