@@ -49,5 +49,6 @@ public class RandomNumberUtils {
 
 	public static void main(String[] args) {
 		System.out.println(decode("MDAz"));
+		System.out.println(encode("12345"));
 	}
 }
